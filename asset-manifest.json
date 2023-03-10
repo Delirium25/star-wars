@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/delirium25.github.io/star-wars/static/css/main.9a16c4b8.css",
+    "main.js": "/delirium25.github.io/star-wars/static/js/main.6d9a3fd1.js",
+    "static/js/787.8ee5e0f1.chunk.js": "/delirium25.github.io/star-wars/static/js/787.8ee5e0f1.chunk.js",
+    "static/media/bg_1@2x.png": "/delirium25.github.io/star-wars/static/media/bg_1@2x.5766ee6f38cc45aad16f.png",
+    "static/media/vader@3x.png": "/delirium25.github.io/star-wars/static/media/vader@3x.bfd9cc12ec350d473c68.png",
+    "static/media/kenobi@3x.png": "/delirium25.github.io/star-wars/static/media/kenobi@3x.7b053eb14b17dbeb3757.png",
+    "static/media/phasma@3x.png": "/delirium25.github.io/star-wars/static/media/phasma@3x.0021a7839850fa4cc750.png",
+    "static/media/bg_2@2x.png": "/delirium25.github.io/star-wars/static/media/bg_2@2x.158bbe4fe4b718a47cf6.png",
+    "static/media/boba@3x.png": "/delirium25.github.io/star-wars/static/media/boba@3x.4563e12c747bb98094e4.png",
+    "static/media/anakin@3x.png": "/delirium25.github.io/star-wars/static/media/anakin@3x.5451a526524df60ed168.png",
+    "static/media/grievous@3x.png": "/delirium25.github.io/star-wars/static/media/grievous@3x.c4e561b024f1e4304916.png",
+    "static/media/maul@3x.png": "/delirium25.github.io/star-wars/static/media/maul@3x.b650575d627e55244b1e.png",
+    "static/media/rey@3x.png": "/delirium25.github.io/star-wars/static/media/rey@3x.0ede47013d3c33501531.png",
+    "static/media/yoda@3x.png": "/delirium25.github.io/star-wars/static/media/yoda@3x.cbe7b312899394182a68.png",
+    "static/media/solo@3x.png": "/delirium25.github.io/star-wars/static/media/solo@3x.baab392269b7679a16c4.png",
+    "static/media/luke@3x.png": "/delirium25.github.io/star-wars/static/media/luke@3x.cfd152adb27f335d7180.png",
+    "static/media/stormtrooper@3x.png": "/delirium25.github.io/star-wars/static/media/stormtrooper@3x.8521f8aacfb8a196a1e5.png",
+    "static/media/Poppins-Regular.ttf": "/delirium25.github.io/star-wars/static/media/Poppins-Regular.8081832fc5cfbf634aa6.ttf",
+    "static/media/Poppins-Bold.ttf": "/delirium25.github.io/star-wars/static/media/Poppins-Bold.404e299be26d78e66794.ttf",
+    "static/media/Poppins-ExtraBold.ttf": "/delirium25.github.io/star-wars/static/media/Poppins-ExtraBold.4ed78cd5d64af4efc3c7.ttf",
+    "static/media/SfDistantGalaxyAltoutline-e2Bp.ttf": "/delirium25.github.io/star-wars/static/media/SfDistantGalaxyAltoutline-e2Bp.9f1fce1f1ab76b59b0ab.ttf",
+    "static/media/Starjedi.ttf": "/delirium25.github.io/star-wars/static/media/Starjedi.8d577dc1e1755c4860f3.ttf",
+    "index.html": "/delirium25.github.io/star-wars/index.html",
+    "main.9a16c4b8.css.map": "/delirium25.github.io/star-wars/static/css/main.9a16c4b8.css.map",
+    "main.6d9a3fd1.js.map": "/delirium25.github.io/star-wars/static/js/main.6d9a3fd1.js.map",
+    "787.8ee5e0f1.chunk.js.map": "/delirium25.github.io/star-wars/static/js/787.8ee5e0f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a16c4b8.css",
+    "static/js/main.6d9a3fd1.js"
+  ]
+}
