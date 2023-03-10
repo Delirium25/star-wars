@@ -1,0 +1,27 @@
+footer {
+    font-family: Poppins Regular;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    margin: 0px 3px 3px 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    footer {
+        position: inherit;
+        justify-content: center;
+        margin: 10px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width:780px) {
+    footer {
+        position: inherit;
+        justify-content: center;
+        margin: 10px 0px 0px 0px;
+    }
+}
