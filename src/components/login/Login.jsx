@@ -10,42 +10,47 @@ function Login() {
   const [password, setPassword] = useState("")
   const [errors, setErrors] = useState()
 
+  const emailRegexp = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
   const userContext = useContext(UserContextContainer)
 
   function handleSubmit() {
-    fetch('https://developer.webstar.hu/rest/frontend-felveteli/v2/authentication/', {
-      method: "POST",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-        "Applicant-Id": "33UvnYtU"
-      },
-      referrerPolicy: "no-referrer",
-      body: JSON.stringify({
-        "username": userName,
-        "password": password
-      }),
-    }).then((response) => {
+    if (!emailRegexp.test(userName)) {
+      setErrors("Nem megfelelő e-mail cím!");
+    } else {
+      fetch('https://developer.webstar.hu/rest/frontend-felveteli/v2/authentication/', {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        credentials: "same-origin",
+        headers: {
+          "Content-Type": "application/json",
+          "Applicant-Id": "33UvnYtU"
+        },
+        referrerPolicy: "no-referrer",
+        body: JSON.stringify({
+          "username": userName,
+          "password": password
+        }),
+      }).then((response) => {
 
-      if (response.status === 200) {
-        response.json()
-          .then((data) => userContext.loginUser(data))
-      } else if (response.status >= 400 && response.status < 500) {
-        response.json()
-          .then((data) => {
-            console.log(`${response.status} login error:`, data)
-            setErrors("Váratlan hiba a belépés során!")
-          })
-      } else if (response.status === 500) {
-        response.json()
-          .then((data) => {
-            console.log(`${response.status} login error:`, data)
-            setErrors("Hibás felhasználónév vagy jelszó!")
-          })
-      }
-    })
+        if (response.status === 200) {
+          response.json()
+            .then((data) => userContext.loginUser(data))
+        } else if (response.status >= 400 && response.status < 500) {
+          response.json()
+            .then((data) => {
+              console.log(`${response.status} login error:`, data)
+              setErrors("Váratlan hiba a belépés során!")
+            })
+        } else if (response.status === 500) {
+          response.json()
+            .then((data) => {
+              console.log(`${response.status} login error:`, data)
+              setErrors("Hibás felhasználónév vagy jelszó!")
+            })
+        }
+      })
+    }
   }
 
   return (
