@@ -8,26 +8,45 @@ function Modules() {
     const charStates = useContext(CharStatesContext);
     const selectedCharacter = charStates.selectedCharacter
     const selectedFighters = charStates.selectedFighters;
-    const alreadyAddedFighter = selectedFighters.filter(fighter => fighter.id === selectedCharacter.id).length > 0;
-    const notSelectableText = "Nem választható"
-    const selectCharText = "Karakter kiválasztása"
+    const setSelectedFighters = charStates.setSelectedFighters;
+    const notSelectableText = "Nem választható";
+    const selectCharText = "Karakter kiválasztása";
+    const removeCharText = "Karakter eltávolítása";
 
     const [buttonText, setButtonText] = useState(calculateButtonText());
 
-    useEffect(() => setButtonText(calculateButtonText()), [selectedCharacter])
+    useEffect(() => { setButtonText(calculateButtonText()) }, [selectedCharacter, selectedFighters])
 
     function calculateButtonText() {
-        return alreadyAddedFighter || !canAddFighter() ? notSelectableText : selectCharText;
+        if (alreadyAddedFighter()) {
+            return removeCharText
+        } else if (!canAddFighter()) {
+            return notSelectableText
+        } else {
+            return selectCharText
+        }
     }
 
-    function addFighter() {
-        selectedFighters.push(selectedCharacter)
-        setButtonText(notSelectableText)
+    function addOrRemoveButton() {
+        if (alreadyAddedFighter()) {
+            deleteFighter()
+        } else {
+            addFighter()
+        }
         console.log(selectedFighters)
     }
 
+    function addFighter() {
+        setSelectedFighters([...selectedFighters, selectedCharacter])
+    }
+
+    function alreadyAddedFighter() {
+        return selectedFighters.find(fighter => fighter.id === selectedCharacter.id);
+    }
+
     function deleteFighter() {
-        
+        const updatedFighters = selectedFighters.filter(char => char.id !== selectedCharacter.id)
+        setSelectedFighters(updatedFighters)
     }
 
     function canAddFighter() {
@@ -48,7 +67,7 @@ function Modules() {
                 <div className='functionality'>
                     <p>Válassz két karaktert ellentétes oldalakról</p>
                     <div className='module-buttons'>
-                        <button disabled={!canAddFighter()} onClick={() => addFighter()}>{buttonText}</button>
+                        <button disabled={!canAddFighter() && !alreadyAddedFighter()} onClick={() => addOrRemoveButton()}>{buttonText}</button>
                         {startFightButton()}
                     </div>
                 </div>
