@@ -72,4 +72,7 @@
   .module-buttons {
     flex-wrap: wrap;
   }
+  .module-buttons button:nth-child(odd) {
+    width: 200px;
+  }
 }/*# sourceMappingURL=Modules.css.map */

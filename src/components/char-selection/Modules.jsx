@@ -26,6 +26,10 @@ function Modules() {
         console.log(selectedFighters)
     }
 
+    function deleteFighter() {
+        
+    }
+
     function canAddFighter() {
         return selectedFighters.length === 0 || (selectedFighters.length === 1 && selectedFighters[0].side !== selectedCharacter.side)
     }
