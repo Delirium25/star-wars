@@ -1,0 +1,75 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: PoppinsBold;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: PoppinsBlack;
+  src: url(../fonts/Poppins-Black.ttf);
+}
+.module-container {
+  margin: 40px 0px 0px 0px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 35px;
+}
+
+.module-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 5px;
+}
+
+.module-container h2 {
+  font-family: PoppinsBlack;
+  font-size: 24px;
+  color: white;
+}
+
+.module-container h3 {
+  font-family: PoppinsBold;
+  font-size: 18px;
+  color: white;
+}
+
+.module-container p {
+  font-family: Poppins;
+  font-size: 16px;
+  color: #8A8A8A;
+}
+
+.module-buttons button:nth-child(even) {
+  height: 40px;
+  width: 175px;
+  font-family: PoppinsBold;
+  background: #F7B500;
+  font-size: 16px;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.module-buttons button:nth-child(odd) {
+  font-family: PoppinsBold;
+  font-size: 16px;
+  color: white;
+  border: 2px solid #F7B500;
+  border-radius: 4px;
+  background: transparent;
+  width: 220px;
+  height: 40px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .module-buttons {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=Modules.css.map */

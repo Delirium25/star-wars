@@ -1,7 +1,15 @@
 import React from 'react'
 import Star from "./images/star@3x.png"
+import Modules from './Modules'
+import { useContext } from 'react';
+import { CharStatesContext } from './Characters';
 
-function CharacterDetails({ selectedCharacter }) {
+
+function CharacterDetails() {
+
+  const charStates = useContext(CharStatesContext);
+  const selectedCharacter = charStates.selectedCharacter
+  const selectedFighters = charStates.selectedFighters;
 
   function resolveSide(side) {
     if (side === "DARK") {
@@ -40,9 +48,10 @@ function CharacterDetails({ selectedCharacter }) {
         </div>
 
       </div>
-      
+
       <h1 dangerouslySetInnerHTML={{ __html: selectedCharacter.name }}></h1>
       <p className='char-description'>{selectedCharacter.description}</p>
+      <Modules />
     </div>
   )
 }

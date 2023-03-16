@@ -67,7 +67,7 @@
 
 .error {
   font-family: Poppins;
-  color: red;
+  color: #FF3232;
   font-size: 14px;
   text-align: center;
   margin-bottom: 5px;
@@ -98,6 +98,7 @@
   height: 40px;
   margin: 32px;
   width: 200px;
+  cursor: pointer;
 }
 
 .login input {
@@ -121,4 +122,4 @@
   .submit-button {
     width: 150px;
   }
-}/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=Login.css.map */

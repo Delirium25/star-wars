@@ -5,14 +5,19 @@ import { useContext } from 'react';
 import { UserContextContainer } from '../../App';
 import CharacterSwiper from './CharacterSwiper';
 import CharacterDetails from './CharacterDetails';
+import CharStates from './CharStates';
+
+export const CharStatesContext = React.createContext();
 
 function Characters() {
 
     const [characters, setCharacters] = useState([])
     const [errors, setErrors] = useState()
     const [selectedCharacter, setSelectedCharacter] = useState()
+    const [selectedFighters, setSelectedFighters] = useState([])
 
     const userContext = useContext(UserContextContainer)
+    const charStatesContext = new CharStates(characters, setCharacters, errors, setErrors, selectedCharacter, setSelectedCharacter, selectedFighters, setSelectedFighters)
 
     useEffect(() => {
         fetch("https://developer.webstar.hu/rest/frontend-felveteli/v2/characters/", {
@@ -46,19 +51,21 @@ function Characters() {
     function charactersPage() {
         return <>
             <div className='char-content'>
-                {selectedCharacter != null ? <CharacterDetails selectedCharacter={selectedCharacter} /> : ""}
-                <CharacterSwiper characters={characters} setSelectedCharacter={setSelectedCharacter} />
+                {selectedCharacter != null ? <CharacterDetails /> : ""}
+                <CharacterSwiper />
             </div>
         </>
     }
 
     return (
         <>
-            <div className='char-root'>
-                <Layout>
-                    {errors != null ? <div className='error'>{errors}</div> : charactersPage()}
-                </Layout>
-            </div>
+            <CharStatesContext.Provider value={charStatesContext}>
+                <div className='char-root'>
+                    <Layout>
+                        {errors != null ? <div className='error'>{errors}</div> : charactersPage()}
+                    </Layout>
+                </div>
+            </CharStatesContext.Provider>
         </>
     )
 }

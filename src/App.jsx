@@ -17,14 +17,10 @@ function App() {
 
   useEffect(() => { document.title = "WebStar" }, [])
 
-  function getCurrentPage() {
-    return <Characters />
-  }
-
   return (
     <>
       <UserContextContainer.Provider value={userContext}>
-        {userContext.isLoggedIn() ? getCurrentPage() : <Login />}
+        {userContext.isLoggedIn() ? <Characters /> : <Login />}
       </UserContextContainer.Provider>
     </>
   );

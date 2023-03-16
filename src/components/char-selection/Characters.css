@@ -98,16 +98,16 @@
 .details-box p {
   font-size: 20px;
   font-family: PoppinsBold;
-  height: 30px;
-  margin: 1px 0px 1px 0px;
+  margin-right: 1px;
+  margin-left: 1px;
   color: white;
+  height: 50%;
 }
 
 .details-box .details-title {
   font-size: 16px;
   color: #F7B500;
   font-family: PoppinsBold;
-  height: 20px;
   min-width: 100px;
 }
 
@@ -182,72 +182,6 @@
   font-family: Starjedi;
   src: url(../fonts/Starjedi.ttf);
 }
-@media only screen and (max-width: 600px) {
-  .square {
-    width: 18px;
-    height: 18px;
-    border: 4px solid white;
-  }
-  .details-icon {
-    width: 26px;
-    height: 26px;
-  }
-  .details-icon img {
-    width: 20px;
-    height: 20px;
-  }
-  .details-box .details-title {
-    min-width: 70px;
-    font-size: 12px;
-  }
-  .details-box {
-    gap: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .details-box p {
-    font-size: 14px;
-  }
-  .texts {
-    margin: 0px 10px 0px 10px;
-  }
-  .char-content {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-  }
-  .char-root {
-    height: auto;
-    width: 100%;
-  }
-  .swiper {
-    width: 350px;
-    height: 100%;
-  }
-  .prev {
-    width: 40px;
-    height: 40px;
-  }
-  .next {
-    width: 40px;
-    height: 40px;
-  }
-  .char-bg {
-    width: 220px;
-    height: 220px;
-    border: 1px hidden black;
-    border-radius: 110px;
-    background-color: #F7B500;
-    position: absolute;
-    z-index: -1;
-    bottom: 75px;
-    left: 115px;
-  }
-  .char-detail h1 {
-    font-size: 30px;
-  }
-}
 @media only screen and (max-width: 1300px) {
   .char-detail h1 {
     font-size: 60px;
@@ -270,14 +204,14 @@
 }
 @media only screen and (max-width: 992px) {
   .swiper {
-    width: 350px;
+    width: 300px;
   }
   .char-bg {
-    width: 210px;
-    height: 210px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
-    bottom: 75px;
-    left: 100px;
+    bottom: 100px;
+    left: 110px;
   }
   .prev {
     width: 50px;
@@ -326,6 +260,9 @@
     flex-direction: column-reverse;
     justify-content: space-between;
   }
+  .swiper-navigation {
+    justify-content: center;
+  }
   .char-root {
     height: auto;
     width: 100vw;
@@ -333,5 +270,122 @@
   .swiper {
     width: 350px;
     height: 100%;
+  }
+  .char-detail {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .square {
+    width: 18px;
+    height: 18px;
+    border: 4px solid white;
+  }
+  .details-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .details-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  .details-box .details-title {
+    min-width: 70px;
+    font-size: 12px;
+  }
+  .details-box {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .details-box p {
+    font-size: 14px;
+  }
+  .texts {
+    margin: 0px 10px 0px 10px;
+  }
+  .char-content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+  .char-root {
+    height: auto;
+    width: 100%;
+  }
+  .swiper {
+    width: 260px;
+    height: 100%;
+  }
+  .prev {
+    width: 40px;
+    height: 40px;
+  }
+  .next {
+    width: 40px;
+    height: 40px;
+  }
+  .char-bg {
+    width: 180px;
+    height: 180px;
+    border: 1px hidden black;
+    border-radius: 50%;
+    background-color: #F7B500;
+    position: absolute;
+    z-index: -1;
+    bottom: 45px;
+    left: 75px;
+  }
+  .char-detail h1 {
+    font-size: 30px !important;
+  }
+  .content {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .char-detail h1 {
+    font-size: 40px;
+  }
+  .swiper {
+    width: 200px;
+    height: 100%;
+  }
+  .char-bg {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    bottom: 50px;
+    left: 60px;
+  }
+  .square {
+    width: 16px;
+    height: 16px;
+    border: 4px solid white;
+  }
+  .details-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .details-icon img {
+    width: 18px;
+    height: 18px;
+  }
+  .details-box .details-title {
+    min-width: 70px;
+    font-size: 12px;
+  }
+  .details-box {
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .details-box p {
+    font-size: 12px;
+  }
+  .texts {
+    margin: 0;
   }
 }/*# sourceMappingURL=Characters.css.map */

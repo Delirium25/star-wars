@@ -6,11 +6,18 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper';
 import SwipeButton from "./images/arrow_circle@3x.png";
 import { useRef } from 'react';
+import { CharStatesContext } from './Characters';
+import { useContext } from 'react';
 
 
-function CharacterSwiper({ setSelectedCharacter, characters }) {
+function CharacterSwiper() {
+
+    const charStates = useContext(CharStatesContext);
+    const setSelectedCharacter = charStates.setSelectedCharacter;
+    const characters = charStates.characters;
 
     const swiperRef = useRef(null);
+    
     const goNext = () => {
         if (swiperRef.current && swiperRef.current.swiper) {
             swiperRef.current.swiper.slideNext();
