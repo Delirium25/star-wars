@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/star-wars/static/css/main.5981c043.css",
-    "main.js": "/star-wars/static/js/main.4bf6cdd6.js",
+    "main.css": "/star-wars/static/css/main.3efad664.css",
+    "main.js": "/star-wars/static/js/main.b188716e.js",
     "static/js/787.8ee5e0f1.chunk.js": "/star-wars/static/js/787.8ee5e0f1.chunk.js",
     "static/media/bg_1@2x.png": "/star-wars/static/media/bg_1@2x.5766ee6f38cc45aad16f.png",
     "static/media/vader@3x.png": "/star-wars/static/media/vader@3x.bfd9cc12ec350d473c68.png",
@@ -20,15 +20,16 @@
     "static/media/Poppins-Regular.ttf": "/star-wars/static/media/Poppins-Regular.8081832fc5cfbf634aa6.ttf",
     "static/media/Poppins-Bold.ttf": "/star-wars/static/media/Poppins-Bold.404e299be26d78e66794.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/star-wars/static/media/Poppins-ExtraBold.4ed78cd5d64af4efc3c7.ttf",
+    "static/media/Poppins-Black.ttf": "/star-wars/static/media/Poppins-Black.eacee5bb9c7fee5939ae.ttf",
     "static/media/SfDistantGalaxyAltoutline-e2Bp.ttf": "/star-wars/static/media/SfDistantGalaxyAltoutline-e2Bp.9f1fce1f1ab76b59b0ab.ttf",
     "static/media/Starjedi.ttf": "/star-wars/static/media/Starjedi.8d577dc1e1755c4860f3.ttf",
     "index.html": "/star-wars/index.html",
-    "main.5981c043.css.map": "/star-wars/static/css/main.5981c043.css.map",
-    "main.4bf6cdd6.js.map": "/star-wars/static/js/main.4bf6cdd6.js.map",
+    "main.3efad664.css.map": "/star-wars/static/css/main.3efad664.css.map",
+    "main.b188716e.js.map": "/star-wars/static/js/main.b188716e.js.map",
     "787.8ee5e0f1.chunk.js.map": "/star-wars/static/js/787.8ee5e0f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5981c043.css",
-    "static/js/main.4bf6cdd6.js"
+    "static/css/main.3efad664.css",
+    "static/js/main.b188716e.js"
   ]
 }
