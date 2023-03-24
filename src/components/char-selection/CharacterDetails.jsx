@@ -9,7 +9,6 @@ function CharacterDetails() {
 
   const charStates = useContext(CharStatesContext);
   const selectedCharacter = charStates.selectedCharacter
-  const selectedFighters = charStates.selectedFighters;
 
   function resolveSide(side) {
     if (side === "DARK") {

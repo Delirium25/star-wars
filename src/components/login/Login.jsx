@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import "./Login.scss"
 import Footer from '../Footer'
 import { useContext } from 'react';
@@ -6,15 +6,15 @@ import { UserContextContainer } from '../../App';
 
 function Login() {
 
-  const [userName, setUserName] = useState("")
-  const [password, setPassword] = useState("")
+  const userName = useRef()
+  const password = useRef()
   const [errors, setErrors] = useState()
 
   const emailRegexp = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
   const userContext = useContext(UserContextContainer)
 
   function handleSubmit() {
-    if (!emailRegexp.test(userName)) {
+    if (!emailRegexp.test(userName.current.value)) {
       setErrors("Nem megfelelő e-mail cím!");
     } else {
       fetch('https://developer.webstar.hu/rest/frontend-felveteli/v2/authentication/', {
@@ -28,8 +28,8 @@ function Login() {
         },
         referrerPolicy: "no-referrer",
         body: JSON.stringify({
-          "username": userName,
-          "password": password
+          "username": userName.current.value,
+          "password": password.current.value
         }),
       }).then((response) => {
 
@@ -61,11 +61,11 @@ function Login() {
         <form>
           <label>
             <p className='login-text-name' >Felhasználónév</p>
-            <input type="text" onChange={e => setUserName(e.target.value)} />
+            <input type="text" ref={userName} />
           </label>
           <label>
             <p className='login-text-password'>Jelszó</p>
-            <input type="password" onChange={e => setPassword(e.target.value)} />
+            <input type="password" ref={password} />
           </label>
           <div className='button-container'>
             <button className='submit-button' type="button" onClick={handleSubmit}>Belépés</button>

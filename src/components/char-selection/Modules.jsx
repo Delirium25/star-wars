@@ -37,7 +37,7 @@ function Modules() {
     }
 
     function addFighter() {
-        setSelectedFighters([...selectedFighters, selectedCharacter])
+        setSelectedFighters((current) => [...current, selectedCharacter])
     }
 
     function alreadyAddedFighter() {
